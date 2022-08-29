@@ -10,6 +10,8 @@ jobs:
       volumes:
         - ${{github.workspace}}:/project
       options: --user root
+      env: 
+        HOME: "/root"
     steps:
       - run: echo "TODO"
       - run: echo "${USER}"
