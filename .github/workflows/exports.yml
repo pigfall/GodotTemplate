@@ -9,6 +9,7 @@ jobs:
       image: koitown/godot-export:3.5
       volumes:
         - ${{github.workspace}}:/project
+      options: --user root
     steps:
       - run: echo "TODO"
       - name: Check out code
