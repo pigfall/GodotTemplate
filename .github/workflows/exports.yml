@@ -9,15 +9,13 @@ jobs:
       image: koitown/godot-export:3.5
       volumes:
         - ${{github.workspace}}:/project
-      options: --user root
-      env: 
-        HOME: "/root"
     steps:
+      - run: sh -c "echo HOME=/root >> $GITHUB_ENV"
       - run: echo "TODO"
       - run: echo "${USER}"
       - run: echo "${HOME}"
       - name: Check out code
         uses: actions/checkout@v2
-          #- run: godot --export-debug Android /tmp/output.apk
+      - run: godot --export-debug Android /tmp/output.apk
     
 
