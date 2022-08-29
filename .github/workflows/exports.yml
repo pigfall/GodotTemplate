@@ -5,8 +5,12 @@ on:
 jobs:
   Export-Android:
     runs-on: ubuntu-latest
+    container:
+      image: koitown/godot-exposts:3.5
+      volumes:
+        - ${{github.workspace}}:/project
     steps:
       - run: echo "TODO"
-      - run : echo "$(pwd)"
+      - run: godot --export-debug Android /tmp/output.apk
     
 
