@@ -12,7 +12,8 @@ jobs:
       options: --user root
     steps:
       - run: echo "TODO"
-      - run: echo "${USER} ${HOME}"
+      - run: echo "${USER}"
+      - run: echo "${HOME}"
       - name: Check out code
         uses: actions/checkout@v2
           #- run: godot --export-debug Android /tmp/output.apk
