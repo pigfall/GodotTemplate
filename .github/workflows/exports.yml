@@ -11,6 +11,7 @@ jobs:
         - ${{github.workspace}}:/project
     steps:
       - run: echo "TODO"
-      - run: godot --export-debug Android /tmp/output.apk
+        #- run: godot --export-debug Android /tmp/output.apk
+      - run: echo "$(pwd)"
     
 
