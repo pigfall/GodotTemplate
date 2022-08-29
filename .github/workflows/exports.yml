@@ -1,0 +1,12 @@
+name: Exports
+on: 
+  pull_request:
+    branched: ["main"]
+jobs:
+  Export-Android:
+    runs-on: koitown:godot-exports:3.5
+    steps:
+      - run: echo "TODO"
+      - run : echo "$(pwd)"
+    
+
