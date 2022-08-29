@@ -6,7 +6,7 @@ jobs:
   Export-Android:
     runs-on: ubuntu-latest
     container:
-      image: koitown/godot-exposts:3.5
+      image: koitown/godot-export:3.5
       volumes:
         - ${{github.workspace}}:/project
     steps:
