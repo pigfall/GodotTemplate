@@ -9,13 +9,15 @@ jobs:
       image: koitown/godot-export:3.5
       volumes:
         - ${{github.workspace}}:/project
+        - /tmp:/tmp
     steps:
       - run: sh -c "echo HOME=/root >> $GITHUB_ENV"
-      - run: echo "TODO"
-      - run: echo "${USER}"
-      - run: echo "${HOME}"
       - name: Check out code
         uses: actions/checkout@v2
       - run: godot --export-debug Android /tmp/output.apk
-    
+      - uses: actions/upload-artifact@v3
+        with:
+          name: my-artifact
+          path: /tmp/output.apk
+
 
